@@ -16,10 +16,8 @@ type SmartContract struct {
 
 type Event struct {
 	ID          string  `json:"id"`
-	Lat         float32 `json:"lat"`
-	Long        float32 `json:"long"`
-	Orientation float32 `json:"orientation"`
-	Image       []byte  `json:"image"` // Is this really needed?
+	Lane        []int   `json:"lane_numbers"`
+	Image       []byte  `json:"image"` 
 }
 
 func (s *SmartContract) InitLedger(ctx contractapi.TransactionContextInterface) error {
