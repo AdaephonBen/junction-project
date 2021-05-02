@@ -17,7 +17,8 @@ type SmartContract struct {
 type Event struct {
 	ID          string  `json:"id"`
 	Lane        []int   `json:"lane_numbers"`
-	Image       []byte  `json:"image"` 
+	Image       []byte  `json:"image"`
+	Metadata    string  `json:"metadata"`
 }
 
 func (s *SmartContract) InitLedger(ctx contractapi.TransactionContextInterface) error {
